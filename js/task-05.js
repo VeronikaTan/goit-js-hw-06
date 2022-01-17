@@ -7,10 +7,12 @@ const outputField = document.querySelector('#name-output');
 
 
 inputField.addEventListener('input', (event) => {
+    
     const inputValue = event.currentTarget.value
-    if (inputValue === ' ') {
+
+    if (inputValue === '') {
         outputField.textContent = 'Anonymous';
     } else
         outputField.textContent = inputValue;
-        
+        event.preventDefault()
 });
